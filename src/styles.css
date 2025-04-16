@@ -14,6 +14,10 @@ body {
   flex-direction: row;
 }
 
-.navbar-item {
+.navbar-item-container {
   flex: 1;
+}
+
+.navbar-item-button-container {
+  height: 100%;
 }
