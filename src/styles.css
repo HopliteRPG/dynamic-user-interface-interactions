@@ -21,3 +21,8 @@ body {
 .navbar-item-button-container {
   height: 100%;
 }
+
+.navbar-item-button-container .navbar-item-button {
+  height: 100%;
+  width: 100%;
+}
