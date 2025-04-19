@@ -7,11 +7,11 @@ function getEachNavbarItemContainer() {
     ".navbar-item-container",
   );
   navbarItemContainerCollection.forEach((navbarItemContainer) => {
-    getNavbarSubItemContainer(navbarItemContainer);
+    getNavbarSubItemContainerAndButton(navbarItemContainer);
   });
 }
 
-function getNavbarSubItemContainer(navbarItemContainer) {
+function getNavbarSubItemContainerAndButton(navbarItemContainer) {
   let navSubItemContainer = navbarItemContainer.querySelector(
     ".navbar-sub-item-container",
   );
