@@ -1,4 +1,4 @@
-export { getEachNavbarItemContainer };
+export { allTogether };
 
 // let navbarDom = document.querySelector(".navbar");
 
@@ -6,9 +6,7 @@ function getEachNavbarItemContainer() {
   let navbarItemContainerCollection = document.querySelectorAll(
     ".navbar-item-container",
   );
-  navbarItemContainerCollection.forEach((navbarItemContainer) => {
-    getNavbarSubItemContainerAndButton(navbarItemContainer);
-  });
+  return navbarItemContainerCollection;
 }
 
 function getNavbarSubItemContainerAndButton(navbarItemContainer) {
@@ -19,12 +17,18 @@ function getNavbarSubItemContainerAndButton(navbarItemContainer) {
 
   console.log(navSubItemContainer);
   console.log(navButton);
+  setNavbarBtnFunctionality(navButton, navSubItemContainer);
 }
 
-// function setNavbarBtnFunctionality() {
-//   navbarBtn.forEach((button) => {
-//     button.addEventListener("mouseover", () => {
-//       console.log("hover over");
-//     });
-//   });
-// }
+function setNavbarBtnFunctionality(button, subItemText) {
+  button.addEventListener("mouseover", () => {
+    console.log(subItemText);
+  });
+}
+
+function allTogether() {
+  let listTest = getEachNavbarItemContainer();
+  listTest.forEach((element) => {
+    getNavbarSubItemContainerAndButton(element);
+  });
+}
