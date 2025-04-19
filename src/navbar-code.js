@@ -1,11 +1,30 @@
-export { setNavbarBtnFunctionality };
+export { getEachNavbarItemContainer };
 
-let navbarBtn = document.querySelectorAll(".navbar-item-button");
+// let navbarDom = document.querySelector(".navbar");
 
-function setNavbarBtnFunctionality() {
-  navbarBtn.forEach((button) => {
-    button.addEventListener("mouseover", () => {
-      console.log("hover over");
-    });
+function getEachNavbarItemContainer() {
+  let navbarItemContainerCollection = document.querySelectorAll(
+    ".navbar-item-container",
+  );
+  navbarItemContainerCollection.forEach((navbarItemContainer) => {
+    getNavbarSubItemContainer(navbarItemContainer);
   });
 }
+
+function getNavbarSubItemContainer(navbarItemContainer) {
+  let navSubItemContainer = navbarItemContainer.querySelector(
+    ".navbar-sub-item-container",
+  );
+  let navButton = navbarItemContainer.querySelector(".navbar-item-button");
+
+  console.log(navSubItemContainer);
+  console.log(navButton);
+}
+
+// function setNavbarBtnFunctionality() {
+//   navbarBtn.forEach((button) => {
+//     button.addEventListener("mouseover", () => {
+//       console.log("hover over");
+//     });
+//   });
+// }

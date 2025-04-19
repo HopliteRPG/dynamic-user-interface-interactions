@@ -1,3 +1,4 @@
-import { setNavbarBtnFunctionality } from "./navbar-code";
+import { getEachNavbarItemContainer } from "./navbar-code";
 import "./styles.css";
-setNavbarBtnFunctionality();
+
+getEachNavbarItemContainer();
