@@ -9,19 +9,18 @@ function getEachNavbarItemContainer() {
   return navbarItemContainerCollection;
 }
 
-function getNavbarSubItemContainerAndButton(navbarItemContainer) {
-  let navSubItemContainer = navbarItemContainer.querySelector(
+function getNavbarItemContainerAndSubItemContainer(navbarItemContainer) {
+  let navbarItemContainerVar = navbarItemContainer;
+  let navSubItemContainer = navbarItemContainerVar.querySelector(
     ".navbar-sub-item-container",
   );
-  let navButton = navbarItemContainer.querySelector(".navbar-item-button");
 
-  console.log(navSubItemContainer);
-  console.log(navButton);
-  setNavbarBtnFunctionality(navButton, navSubItemContainer);
+  setNavbarBtnFunctionality(navbarItemContainerVar, navSubItemContainer);
 }
 
-function setNavbarBtnFunctionality(button, subItemText) {
-  button.addEventListener("mouseover", () => {
+function setNavbarBtnFunctionality(navbarItemContainer, subItemText) {
+  navbarItemContainer.addEventListener("mouseover", () => {
+    subItemText.classList.add("hide-navbar-item-container");
     console.log(subItemText);
   });
 }
@@ -29,6 +28,6 @@ function setNavbarBtnFunctionality(button, subItemText) {
 function allTogether() {
   let listTest = getEachNavbarItemContainer();
   listTest.forEach((element) => {
-    getNavbarSubItemContainerAndButton(element);
+    getNavbarItemContainerAndSubItemContainer(element);
   });
 }
