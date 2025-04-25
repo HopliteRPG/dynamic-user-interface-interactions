@@ -18,6 +18,14 @@ function getNavbarItemContainerAndSubItemContainer(navbarItemContainer) {
   setNavbarBtnFunctionality(navbarItemContainerVar, navSubItemContainer);
 }
 
+function hideSubTextOnStartUp(navbarItemContainer) {
+  let navbarItemContainerVar = navbarItemContainer;
+  let navSubItemContainer = navbarItemContainerVar.querySelector(
+    ".navbar-sub-item-container",
+  );
+  navSubItemContainer.classList.add("hide-navbar-item-container");
+}
+
 function setNavbarBtnFunctionality(navbarItemContainer, subItemText) {
   navbarItemContainer.addEventListener("mouseover", () => {
     subItemText.classList.remove("hide-navbar-item-container");
@@ -35,5 +43,6 @@ function allTogether() {
   let listTest = getEachNavbarItemContainer();
   listTest.forEach((element) => {
     getNavbarItemContainerAndSubItemContainer(element);
+    hideSubTextOnStartUp(element);
   });
 }
