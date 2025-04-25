@@ -27,6 +27,13 @@ body {
   width: 100%;
 }
 
+.show-navbar-item-container {
+  display: block;
+}
+
 .hide-navbar-item-container {
   display: none;
+}
+
+.navbar-sub-item-container {
 }

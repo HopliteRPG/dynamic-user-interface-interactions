@@ -20,6 +20,12 @@ function getNavbarItemContainerAndSubItemContainer(navbarItemContainer) {
 
 function setNavbarBtnFunctionality(navbarItemContainer, subItemText) {
   navbarItemContainer.addEventListener("mouseover", () => {
+    subItemText.classList.remove("hide-navbar-item-container");
+    subItemText.classList.add("show-navbar-item-container");
+    console.log(subItemText);
+  });
+  navbarItemContainer.addEventListener("mouseout", () => {
+    subItemText.classList.remove("show-navbar-item-container");
     subItemText.classList.add("hide-navbar-item-container");
     console.log(subItemText);
   });
