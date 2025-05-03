@@ -26,7 +26,24 @@ function hideSubTextOnStartUp(navbarItemContainer) {
   navSubItemContainer.classList.add("hide-navbar-item-container");
 }
 
+function setLinks(element) {
+  function linkNeeded(link) {
+    console.log(link);
+  }
+  const buttons = element.querySelectorAll("button");
+  console.log(buttons);
+  buttons.forEach((button) => {
+    if (button.classList.contains("ice-cream-sand-btn")) {
+      button.addEventListener("click", () => {
+        linkNeeded("ice cream sandwich");
+      });
+    }
+  });
+}
+
 function setNavbarBtnFunctionality(navbarItemContainer, subItemText) {
+  setLinks(subItemText);
+
   navbarItemContainer.addEventListener("mouseover", () => {
     subItemText.classList.remove("hide-navbar-item-container");
     subItemText.classList.add("show-navbar-item-container");
