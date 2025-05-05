@@ -37,6 +37,14 @@ function setLinks(element) {
       button.addEventListener("click", () => {
         linkNeeded("ice cream sandwich");
       });
+    } else if (button.classList.contains("rocket-pop-popsicles-btn")) {
+      button.addEventListener("click", () => {
+        linkNeeded("rocket pop popsicles");
+      });
+    } else if (button.classList.contains("nancy-quinn-btn")) {
+      button.addEventListener("click", () => {
+        linkNeeded("Nancy Quinn");
+      });
     }
   });
 }
@@ -47,12 +55,10 @@ function setNavbarBtnFunctionality(navbarItemContainer, subItemText) {
   navbarItemContainer.addEventListener("mouseover", () => {
     subItemText.classList.remove("hide-navbar-item-container");
     subItemText.classList.add("show-navbar-item-container");
-    console.log(subItemText);
   });
   navbarItemContainer.addEventListener("mouseout", () => {
     subItemText.classList.remove("show-navbar-item-container");
     subItemText.classList.add("hide-navbar-item-container");
-    console.log(subItemText);
   });
 }
 
